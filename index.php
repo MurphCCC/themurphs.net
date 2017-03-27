@@ -50,7 +50,7 @@ include_once('functions.php');
 
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
+						<div class="content content-top">
 							<h1>Mike & Jenna</h1>
 							<p class="major"><!--[-->August 11th, 2017<!--]-->
 								<br />

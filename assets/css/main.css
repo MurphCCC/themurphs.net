@@ -8423,6 +8423,6 @@
 				box-shadow: none !important;
 			}
 
-		.content {
-    		text-align: center;
-		}
+	.content.content-top {
+    	text-align: center;
+	}
