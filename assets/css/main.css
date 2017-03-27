@@ -8422,3 +8422,7 @@
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+		.content {
+    		text-align: center;
+		}
