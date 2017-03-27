@@ -1,34 +1,71 @@
 <?php
-	$name = explode(" ", $_POST["name"]);
-	$first = $name[0];
-	// $first = implode("", $first);
-	// $first = strtolower($first);
+
+// Scan a directory containing images and spit out content for each image.
+function image_gallery() {
+    $i = 0; 
+    $dir = 'images/gallery/thumbs/';
+    if ($handle = opendir($dir)) {
+        while (($file = readdir($handle)) !== false){
+            if (!in_array($file, array('.', '..')) && !is_dir($dir.$file)) 
+            	echo '
+						<article>
+							<a href="images/gallery/fulls/'.$file.'" class="image">
+								<img src="images/gallery/thumbs/'.$file.'" alt="" /></a>
+									<div class="caption">
+										<ul class="actions">
+											<li><span class="button small">View</span></li>
+										</ul>
+									</div>
+
+						</article>
+            	';
+                $i++;
+        }
+    }
+}
+
+function script_includes() {
+    echo '
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/jquery.countdown.js"></script>
+        ';
+}
 
 
-    // Function to display a welcome message when someone signs up
-	function thanks_message() {
-		global $name;
-		global $first;
-	    if($_POST["name"] !== "" & isset($_POST["name"])){
-		    echo '<p class="lead">Thanks ';
-		    echo ucfirst($first) . '!';
-		    echo '<br />';
-		    echo 'We\'ll keep you posted!';
-	    } else {}
-	}
 
-	function countdown() {
+function contact() {
 
-		$rem = strtotime('2017-08-11 00:00:00') - time();
-		$day = floor($rem / 86400);
-		$hr  = floor(($rem % 86400) / 3600);
-		$min = floor(($rem % 3600) / 60);
-		$sec = ($rem % 60);
-			if($day) echo "<h2 class='countdown'>$day Days till our wedding...</h2>";
-			// if($hr) echo "$hr Hours ";
-			// if($min) echo "$min Minutes ";
-			// if($sec) echo "$sec Seconds ";
-	}
+        if(isset($_POST["submit"])){
+        $hostname='localhost';
+        $username='root';
+        $password='Sq9SyWrUVupk';
+
+            try {
+
+            $dbh = new PDO("mysql:host=$hostname;dbname=wedding",$username,$password);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
+            $sql = "INSERT INTO sign_up_form (name, email, message, client_ip, time_stamp)
+            VALUES ('".$_POST["name"]."','".$_POST["email"]."','".$_POST["message"]."','".$_SERVER['REMOTE_ADDR']."', NOW())";
+
+            if ($dbh->query($sql)) {
+                echo "<script type= 'text/javascript'>alert('Success');</script>";
+            }   else{
+        echo "<script type= 'text/javascript'>alert('Data not successfully Inserted.');</script>";
+        }
+
+        $dbh = null;
+        }
+        catch(PDOException $e)
+        {
+        echo $e->getMessage();
+        }
+    }
+}
+contact();
 
 ?>
-

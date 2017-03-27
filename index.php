@@ -1,190 +1,238 @@
 <?php
-session_start();
-
-include_once('template_functions.php');
 include_once('functions.php');
-include_once('card_2.php');
-head_tag();
 
 ?>
-</head>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mike & Jenna 2017</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 
-<body>
+		<style type="text/css">
+			
+			#clockdiv{
+				font-family: sans-serif;
+				color: #000;
+				display: inline-block;
+				font-weight: 100;
+				text-align: center;
+				font-size: 30px;
+			}
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav heading" href="#">The Murphs</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#details">Details</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+			#clockdiv > div{
+				padding: 10px;
+				border-radius: 3px;
+				background: ;
+				display: inline-block;
+			}
 
+			#clockdiv div > span{
+				padding: 15px;
+				border-radius: 3px;
+				background: ;
+				display: inline-block;
+			}
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 col-sm-10">
-                    <div class="intro-message">
-<!--                         <h1 class="heading">Mike and Jenna</h1>
-                        <hr class="intro-divider">
-
-                        <h2 class="heading">August 11th, 2017</h2>
-                        <h3>Chattanooga, TN</h3> -->
-                        <!-- <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-	<a  name="details"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Details Coming Soon</h2>
-                    <p class="lead">We are in the early stages of starting to plan for our wedding, once we decide on a venue we will be updating our site with more information.  Stay tuned.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/4.jpg" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">The Venue</h2>
-                    <p class="lead">We haven't decided on a venue yet and we have a few options that we are considering</p>
-                    
+			.smalltext{
+				padding-top: 5px;
+				font-size: 16px;
+			}
 
 
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/3.jpg" alt="">
-                </div>
-            </div>
+		</style>
+	</head>
+	<body>
 
-        </div>
-        <!-- /.container -->
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-    </div>
-    <!-- /.content-section-b -->
-    <a name="contact"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Give us your information and we'll keep you posted</h2>
-                    <p class="lead">Fill out this form and we will put you on our list and send you updates as they become available</p>
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Mike & Jenna</h1>
+							<p class="major"><!--[-->August 11th, 2017<!--]-->
+								<br />
+								Wildwood Georgia
+							</p>
+							<ul class="actions vertical">
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Our big day</a></li>
+							</ul>
+							
 
 
-                </div>
-                <div class="col-lg-5 col-sm-5 form">
-                    <?php card2(); ?>
-                </div>
-            </div>
+						</div>
+						<div class="image">
+							<img src="images/7-med.jpg" alt="" />
+						</div>
+					</section>
 
-        </div>
-        <!-- /.container -->
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-center image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>The Ceremony</h2>
+							<p>The ceremony will be held August 11th, 2017 at 6:00PM in Wildwood Georgia</p>
+							<br />
+							<h2>The Reception</h2>
+							<p>The reception will be held at Calvary Chapel Chattanooga immediately following the ceremony</p>
+							<ul class="actions vertical">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/6-med.jpg" alt="" />
 
-    </div>
-    <!-- /.content-section-a -->
+							
+						</div>
+					</section>
 
-	<a name="footer_banner"></a>
-    <div class="banner">
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-center image-position-center onscroll-image-fade-in">
+						<div class="content">
+						<div class="inner">
+							<h2>Registry</h2>
+							</div>
+							<p>We are currently registered at Bed Bath & Beyond and Target</p>
+							<ul class="actions vertical">
+								<li><a target="_blank" href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=544342577&pwsurl=" class="button">Bed Bath & Beyond Registry</a></li>
+								<li><a target="_blank" href="http://www.target.com/gift-registry/giftgiver?registryId=60b5762818164e7d9330e3b09090e019=" class="button">Target Registry</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/1-med.jpg" alt="" />
+						</div>
+					</section>
 
-        <div class="container">
+				<!-- Four -->
+<!-- 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Pharetra etiam nulla</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<ul class="actions vertical">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight03.jpg" alt="" />
+						</div>
+					</section> -->
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <?php countdown(); ?>
-                </div>
-            </div>
+				<!-- Five -->
+					<section class="wrapper style1 align-center">
+							<h2>Engagement Photos</h2>
+							<p>Photos from the night we got engaged!</p>
+						<!-- Gallery -->
+							<div class="gallery style2 medium lightbox onscroll-fade-in"><?php image_gallery(); ?></div>
+					</section>
 
-        </div>
-        <!-- /.container -->
+				<!-- Six -->
+					<!-- <section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Ipsum sed consequat</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon style2 major fa-diamond"></span>
+									<h3>Lorem</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-save"></span>
+									<h3>Ipsum</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-bar-chart"></span>
+									<h3>Dolor</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-wifi"></span>
+									<h3>Amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-cog"></span>
+									<h3>Magna</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-paper-plane"></span>
+									<h3>Tempus</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-desktop"></span>
+									<h3>Aliquam</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-refresh"></span>
+									<h3>Elit</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-hashtag"></span>
+									<h3>Morbi</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-bolt"></span>
+									<h3>Turpis</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-envelope"></span>
+									<h3>Ultrices</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-leaf"></span>
+									<h3>Risus</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+							</div>
+						</div>
+					</section> -->
 
-    </div>
-    <!-- /.banner -->
+				<!-- Seven -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Get in touch</h2>
+							<form method="post" action="">
+								<div class="field half first">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" value="" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" value="" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="6"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+								</ul>
+							</form>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small">Copyright &copy; MurphWare 2017. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+						</div>
+					</section>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<p>&copy; The Murphs 2017</p>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+						</div>
+					</footer>
 
-</body>
+			</div>
 
+		<!-- Scripts -->
+		<?php script_includes() ?>
+
+	</body>
 </html>
