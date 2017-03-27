@@ -43,7 +43,7 @@ function contact() {
         if(isset($_POST["submit"])){
         $hostname='localhost';
         $username='root';
-        $password='GIMmvxfnyR9S';
+        $password='password';
 
             try {
 
