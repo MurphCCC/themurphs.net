@@ -10,38 +10,6 @@ include_once('functions.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
-		<style type="text/css">
-			
-			#clockdiv{
-				font-family: sans-serif;
-				color: #000;
-				display: inline-block;
-				font-weight: 100;
-				text-align: center;
-				font-size: 30px;
-			}
-
-			#clockdiv > div{
-				padding: 10px;
-				border-radius: 3px;
-				background: ;
-				display: inline-block;
-			}
-
-			#clockdiv div > span{
-				padding: 15px;
-				border-radius: 3px;
-				background: ;
-				display: inline-block;
-			}
-
-			.smalltext{
-				padding-top: 5px;
-				font-size: 16px;
-			}
-
-
-		</style>
 	</head>
 	<body>
 
@@ -59,15 +27,11 @@ include_once('functions.php');
 							<ul class="actions vertical">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Our big day</a></li>
 							</ul>
-							
-
-
 						</div>
 						<div class="image">
-							<img src="images/7-med.jpg" alt="" />
+							<img src="images/front-page.jpg" alt="" />
 						</div>
 					</section>
-
 				<!-- Two -->
 					<section class="spotlight style1 orient-right content-align-center image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -82,8 +46,6 @@ include_once('functions.php');
 						</div>
 						<div class="image">
 							<img src="images/6-med.jpg" alt="" />
-
-							
 						</div>
 					</section>
 
@@ -103,20 +65,7 @@ include_once('functions.php');
 							<img src="images/1-med.jpg" alt="" />
 						</div>
 					</section>
-
 				<!-- Four -->
-<!-- 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Pharetra etiam nulla</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions vertical">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section> -->
 
 				<!-- Five -->
 					<section class="wrapper style1 align-center">
@@ -199,7 +148,7 @@ include_once('functions.php');
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
-							<h2>Get in touch</h2>
+							<h2>R.S. V. P.</h2>
 							<form method="post" action="">
 								<div class="field half first">
 									<label for="name">Name</label>
@@ -208,6 +157,10 @@ include_once('functions.php');
 								<div class="field half">
 									<label for="email">Email</label>
 									<input type="email" name="email" id="email" value="" />
+								</div>
+								<div class="field half first">
+									<label for="guests">How many guests are you bringing?</label>
+									<input type="text" name="guests" id="guests" value="" />
 								</div>
 								<div class="field">
 									<label for="message">Message</label>
